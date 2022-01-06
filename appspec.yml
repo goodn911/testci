@@ -4,7 +4,14 @@ files:
   - source:  /
     destination: /home/ubuntu/app/travis/build/
     overwrite : yes
+permissions:
+  - object: /
+    pattern: "**"
+    owner: ubuntu
+    group: ubuntu
+
 hooks:
-  AfterInstall: # 배포가 끝나면 아래 명령어를 실행
-    - location: execute-deploy.sh
-      timeout: 180
+  ApplicationStart:
+    - location: /home/ubuntu/app/travis/deploy.sh
+      timeout: 60
+      runas: ubuntu
