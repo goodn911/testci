@@ -7,6 +7,6 @@ files:
 
 hooks:
   ApplicationStart:
-    - location: deploy.sh
+    - location: /home/ubuntu/app/travis/deploy.sh
       timeout: 80
       runas: root
