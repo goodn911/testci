@@ -4,9 +4,3 @@ files:
   - source:  /
     destination: /home/ubuntu/app/travis/build/
     overwrite : yes
-
-hooks:
-  ApplicationStart:
-    - location: scripts/deploy.sh
-      timeout: 90
-      runas: root
