@@ -8,5 +8,5 @@ files:
 hooks:
   ApplicationStart:
     - location: deploy.sh
-      timeout: 60
+      timeout: 80
       runas: root
